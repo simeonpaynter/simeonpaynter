@@ -26,15 +26,15 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .logo {
   align: left;
 }
 .navbar {
-  align: right;
   display: flex;
   justify-content: space-evenly;
-  color: gray;
+  background-color: gray;
 }
 
 .navbar-link {
@@ -43,7 +43,10 @@ header {
 }
 
 footer {
-  color: gray;
+  align: bottom;
+  display:flex;
+  justify-content: space-evenly;
+  background-color: gray;
 }
 
 .project-card-grid {
