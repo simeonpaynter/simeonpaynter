@@ -14,7 +14,12 @@ h2 {
   color: var(--color-primary);
 }
 p {
-  padding: 5px;
+  padding: 10px;
+}
+ul {
+  padding: 10px;
+  justify-content: start;
+  gap: 10px;
 }
 
 header {
@@ -54,8 +59,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: left;
-  
+  align-content: start;
 }
 .home-hero {
   min-height: 50%;
@@ -72,12 +76,19 @@ header {
   color: var(--color-text-muted);
 }
 
+.home-pain-point {
+  padding: 5%;
+  min-height: 25%;
+  gap: 5px;
+}
+
 .project-card-grid {
   display: flex;
   flex-wrap: wrap;
   flex-drection: column;
   justify-content: space-between;
   gap: 20px 10px;
+  min-height: 25%;
 }
 .project-card {
   flex: 1 1 300px;
