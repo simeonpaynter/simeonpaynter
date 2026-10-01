@@ -30,6 +30,7 @@ header {
 }
 .logo {
   align: left;
+  background-color: var(color-yellow-highlight);
 }
 .navbar {
   display: flex;
@@ -37,6 +38,7 @@ header {
   background-color: white;
   border: 1px;
   border-color: var(--color-tertiary);
+  gap: 20px;
 }
 
 .navbar-link {
@@ -75,8 +77,8 @@ footer {
   body {
     padding: 24px 16px;
   }
-  .navbar-link {
-    margin: 10px;
+  .navbar {
+    gap: 10px;
   }
   footer {
     margin: 10px;
