@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US"> <!-- add light/dark mode functionality? -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="css/base.css">
 </head>
 <!-- Add Google Tag apart of Phase 2 -->   
-<body>    
+<body>
     <header class="site-header">
-      <h1>Simeon Paynter</h1>
-      <i>Data analytics, automation, and process improvement</i>
-      <!-- should this be wrapped as navbar or header? -->
-      <a href="#" class="portfolio-link">Portfolio</a> <!-- Where to save parent html and create site maps? -->
-      <!-- Placeholder for 
-        <button class="toggle-btn" id="themeToggle" aria-label="Toggle light and dark mode">Light/Dark</button>
-      -->
+        <h1>Simeon Paynter</h1>
+        <i>Data analytics, automation, and process improvement</i>
+        <!-- should this be wrapped as navbar or header? -->
+        <nav class="navbar">
+            <a href="portfolio/overview.html" class="navbar-link">Portfolio</a> <!-- Where to save parent html and create site maps? -->
+            <a href="principles/overview.html" class="navbar-link">Guiding Principles</a>
+            <a href="about.html" class="navbar-link">About</a>
+            <a href="contact.html" class="navbar-link">Contact</a>
+        </nav>
     </header>
 
     <main class="home-page">
+        
+
+        
         <h2>The perfect tool cannot fix a broken workflow.</h2>
         <p>AI has made it easier than ever to:</p>
         <ul>
@@ -29,18 +34,23 @@
           </ul>
           <p>... but are your solutions connected to valuable processes in the first place?</p>
       
-          <h2>AI can rapidly bring visions to life.</h2>
-          <p>Anyone with internet connection can now bring their app, website, automation, reporting, or other visions to life without any knowledge barriers of technical coding languages.</p>
-          <!-- <p>In today's world where AI tools can rapidly create and prototype different solutions, it's easy to be attracted to the fun, new, and exciting tools.</p> -->
+        <h2>AI can rapidly bring visions to life.</h2>
+        <p>Anyone with internet can create and prototype their app, website, automation, reporting, or other visions to life without the knowledge barrier of learning technical coding languages.</p>
+
+        
+
+        
     </main>
     
     <!-- Footer -->
     <footer class="site-footer">
-      <h5>Other Links</h5>
-      <a href="#" class ="footer-link">Portfolio</a>
-      <a href="#" class ="footer-link">Documentation</a>
-      <a href="#" class ="footer-link">Contact</a>
-      <a href="#" class ="footer-link">Resume</a>
+        <h5>Other Links</h5>
+        <a href="portfolio/overview.html" class ="footer-link">Portfolio</a>
+        <a href="https://simbo.tech" class ="footer-link">Documentation</a>
+        <a href="principles/overview.html" class ="footer-link">Guiding Principles</a>
+        <a href="about.html" class ="footer-link">About</a>
+        <a href="resume.html" class ="footer-link">Resume</a>
+        <a href="contact.html" class ="footer-link">Contact</a>
       <!-- <p id="footer-copyright">&copy; 2026 Simeon Paynter. All rights reserved.</p> -->
     </footer>
     <!-- script to process dark and light theme -->
