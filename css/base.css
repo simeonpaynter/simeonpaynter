@@ -21,7 +21,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  padding: 40px 20px;
+  /*padding: 40px 20px;*/
   color: var(--color-text);
 }
 h2 {
@@ -41,10 +41,13 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 20px;
 }
 .logo {
+  padding: 20px;
   align-content: start;
-  color: var(color-yellow-highlight);
+  color: var(--color-yellow-highlight);
+  border: 1px;
 }
 .navbar {
   display: flex;
@@ -53,20 +56,21 @@ header {
   border: 1px;
   border-color: var(--color-tertiary);
   gap: 20px;
+  padding: 20px;
 }
 
 .navbar-link {
   color: var(--color-primary);
   padding: 20px;
+  size: 24px;
+  border: 1px;
 }
 
-footer {
-  align-content: end;
-  display:flex;
-  justify-content: space-evenly;
-  margin: 20px;
-  border: 1px;
-  border-color: var(--color-tertiary);
+.home-hero {
+  min-heigh: 50%;
+}
+.home-hero-img {
+  min-height: 400px;
 }
 
 .project-card-grid {
@@ -85,6 +89,18 @@ footer {
 .project-card-title {
   color: var(--color-primary); 
 }
+
+footer {
+  align-content: end;
+  display:flex;
+  justify-content: space-evenly;
+  margin: 20px;
+  border: 1px;
+  border-color: var(--color-tertiary);
+}
+
+
+
 
 @media (max-width: 400px) {
   body {
