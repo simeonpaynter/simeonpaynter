@@ -7,4 +7,6 @@
   --color-complementary: #E7503B;
   --color-text: #000000; /*Typical text color for paragraphs or large bodies of text*/
   --color-text-muted: #8E8E93;
+
+  --color-yellow-highlight: #CFFF04;
 }
