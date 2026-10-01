@@ -6,6 +6,8 @@
   color: var(--color-text);
 }
 body {
+  width: 100%;
+  min-height: 100vh;
   padding: 40px 20px;
 }
 /*
@@ -18,10 +20,20 @@ body {
 }
 
 .navbar-link {}
-header {}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
 
 footer {}
-*/
+
 .project-card-grid {
   display: flex;
   flex-wrap: wrap;
