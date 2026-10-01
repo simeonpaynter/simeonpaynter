@@ -5,6 +5,9 @@
   background-color: var(--color-bg);
   color: var(--color-text);
 }
+body {
+  padding: 40px 20px;
+}
 /*
 body {
   display: flex;
