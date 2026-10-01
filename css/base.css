@@ -26,16 +26,20 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+.logo {
+  align: left;
 }
 .navbar {
+  align: right;
   display: flex;
   justify-content: space-evenly;
   color: gray;
 }
 
 .navbar-link {
-  color: var(--color-primary); 
+  color: var(--color-primary);
+  padding: 20px;
 }
 
 footer {
@@ -62,5 +66,8 @@ footer {
 @media (max-width: 400px) {
   body {
     padding: 24px 16px;
+  }
+  .navbar-link {
+    padding: 10px;
   }
 }
