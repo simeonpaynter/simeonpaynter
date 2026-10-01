@@ -10,6 +10,9 @@ body {
   min-height: 100vh;
   padding: 40px 20px;
 }
+h2 {
+  color: var(--color-primary);
+}
 /*
 body {
   display: flex;
@@ -18,21 +21,26 @@ body {
   aligh-items: center;
   padding: 40px 20px;
 }
-
-.navbar-link {}
-
-
+*/
 header {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-*/
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  color: gray;
 }
 
-footer {}
+.navbar-link {
+  color: var(--color-primary); 
+}
+
+footer {
+  color: gray;
+}
 
 .project-card-grid {
   display: flex;
@@ -46,6 +54,9 @@ footer {}
 
 .project-card {
   flex: 1 1 300px;
+}
+.project-card-title {
+  color: var(--color-primary); 
 }
 
 @media (max-width: 400px) {
