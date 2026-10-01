@@ -1,12 +1,18 @@
 /* https://www.figma.com/color-wheel/ */
 :root {
   --color-bg: #F2F2F7; /* Background of site screeens */
-  --color-primary: #3BD3E7; /*Background of primary CTAs or selected*/
-  --color-secondary: #3B7DE7; /* Highlight secondary information or hovering*/
-  --color-tertiary: #3BE7A6;
-  --color-complementary: #E7503B;
   --color-text: #000000; /*Typical text color for paragraphs or large bodies of text*/
   --color-text-muted: #8E8E93;
-
   --color-yellow-highlight: #CFFF04;
+  
+  --color-primary: #2D7AB8; /*Background of primary CTAs or selected*/
+    /* #3BD3E7; */
+  --color-secondary: #246194; /* Highlight secondary information or hovering*/
+    /* #3B7DE7; */
+  --color-tertiary: #4291D1;
+    /* #3BE7A6; */
+  --color-complementary: #B86C2D;
+    /* #E7503B; */
+
+  --color-border: #143652;
 }
