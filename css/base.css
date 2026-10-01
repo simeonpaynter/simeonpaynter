@@ -34,19 +34,24 @@ header {
 .navbar {
   display: flex;
   justify-content: space-evenly;
-  background-color: gray;
+  background-color: white;
+  border: 1px;
+  border-color: var(--color-tertiary);
 }
 
 .navbar-link {
   color: var(--color-primary);
-  padding: 20px;
+  margin: 20px;
 }
 
 footer {
   align: bottom;
   display:flex;
   justify-content: space-evenly;
-  background-color: gray;
+  background-color: white;
+  margin: 20px;
+  border: 1px;
+  border-color: var(--color-tertiary);
 }
 
 .project-card-grid {
@@ -71,6 +76,9 @@ footer {
     padding: 24px 16px;
   }
   .navbar-link {
-    padding: 10px;
+    margin: 10px;
+  }
+  footer {
+    margin: 10px;
   }
 }
