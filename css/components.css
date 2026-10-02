@@ -8,6 +8,7 @@ header {
 }
 .logo {
   align-content: start;
+  padding: 20px;
 }
 .navbar {
   display: flex;
