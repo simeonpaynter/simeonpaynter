@@ -25,15 +25,19 @@ header {
 }
 
 /* Footer */
-footer a {
+footer {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 10px;
   align-content: end;
-  size: 20px;
-  margin: 20px;
   color: var(--color-text-muted);
+}
+footer h5, a {
+  align-content: center;
+  size: 20px;
+  padding: 5px;
 }
 
 @media (max-width: 400px) {
