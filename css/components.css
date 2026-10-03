@@ -32,12 +32,13 @@ footer {
   justify-content: space-evenly;
   gap: 10px;
   align-content: end;
-  color: var(--color-text-muted);
+  background-color: var(--bg-color);
 }
 footer h5, a {
   align-content: center;
   size: 20px;
   padding: 5px;
+  color: var(--color-text-muted);
 }
 
 @media (max-width: 400px) {
