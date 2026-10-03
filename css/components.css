@@ -9,6 +9,7 @@ header {
 .logo {
   align-content: start;
   padding: 20px;
+  color: var(--color-primary);
 }
 .navbar {
   display: flex;
