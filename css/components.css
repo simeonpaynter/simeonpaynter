@@ -32,7 +32,6 @@ footer {
   justify-content: space-evenly;
   gap: 10px;
   align-content: end;
-  background-color: var(--bg-color);
 }
 footer h5, a {
   align-content: center;
