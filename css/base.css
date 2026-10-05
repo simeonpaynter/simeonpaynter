@@ -72,9 +72,11 @@ ul {
 .project-card {
   flex: 1 1 300px;
   padding: 20px;
+  border: 5px;
 }
 .project-card-image {
   min-height: 20px;
+  max-height: 100px
 }
 .project-card-title {
   color: var(--color-primary);
@@ -89,5 +91,8 @@ ul {
 @media (max-width: 400px) {
   body {
     padding: 24px 16px;
+  }
+  .project-card-image {
+    max-height: 50px
   }
 }
