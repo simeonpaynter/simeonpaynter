@@ -5,9 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designer Tool</title>
     <!-- CSS and JavaScript apart of phase 2 -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+      h3 {
+        padding-top: 10px;
+      }
+      .side-panel {
+        justify-content: start;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 25%;
+      }
+      input[type="color"] {
+        border: none;
+      }
+      .component-preset {
+        padding: 20px;
+        margin: 5px;
+        border: 2px dashed #555555;
+        border-radius: 5px;
+        cursor: grab;
+        user-select: none;
+      }
+      .component-preset:hover {
+        background: #4A4A4A;
+      }
+      button {
+        justify-content: center;
+        padding: 10px;
+        font-size: 20px;
+      }
+      button: hover {
+        background-color: #555555;
+        color: #FFFFFF;
+        font-size: 22px;
+      }
+      main {
+        margin-left: auto;
+        justify-content: center;
+        height: 100%;
+        width: 70%;
+      }
+      #canvas {
+        height: 812px;
+        width: 375px;
+        background-color: #FFFFFF;
+      }
+
+        
+      label {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+      }
+      textarea {
+        background-color: #F4F0FF;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        border-size: 2px;
+        border-color: #D4C3FE;
+        border-radius: 2px;
+        margin: 5px;
+        width: 100%;
+        height: 250px;
+      }
+      iframe {
+        height: 90%;
+        width: 100%;
+        border: 4px solid #0C0C0C;
+        border-radius: 4px;
+        outline: 0;
+        margin: 5px;
+        background: #FFF;
+      }
+    </style>
 </head>
     
 <!-- Add Google Tag apart of Phase 2 -->   
@@ -23,22 +98,121 @@
             <a href="/about.html" class="navbar-link">About</a>
         </nav>
     </header>
-    
-    <Placeholder> Example of placeholder text </Placeholder>
+
+    <main>
+
+        <section class="design-tool">
+            <div class="left-50">
+                <h5>Import design token, html, css, or other file.</h5>
+                <placeholder>Placeholder for file input</placeholder>
+            </div>
+            <div class="right-50">
+                <h5>Start New using the color picker / generator below.</h5>
+                 <placeholder>Placeholder for steps/table of contents</placeholder>
+            </div>
+        </section>
+        
+        <section class="design-tool">    
+            <h2>Color and Style Token Generator</h2>
+            <p>Select color(s) to compare and use to generate design tokens (for CSS colors and import into tools like Figma). Please see xyz for more info on how to use with other tools.</p>
+            
+            <div class = "color-picker">
+                <label>Primary Color Picker</label>
+                <input type="color" id="color-primary" value="#3B82F6" onchange=updateColors()>
+            </div>
+            
+            <div class = "color-picker">
+                <label>Secondary Color Picker</label>
+                <input type="color" id="color-secondary" value="#10B981" onchange=updateColors()>
+            </div>
+        </section>
+        
+        <section class="export-code">
+            <button onclick="" class="export-link">Export Design Tokens (json)</button>
+            <button onclick="" class="export-link">Export Style dictionary (css)</button>
+        </section>
+        
+        <section class="design-tool">
+            <h2>Wireframe Maker</h2>
+            <p>Select a web page component to drag and drop the item into the Canvas to render a "page". Each page can be exported and updated. Utilize colors from the design token to render the CSS according to your branding colors.
+            
+            <div class="wireframe-picker">
+                <h3>Wireframe Blocks</h3>
+                <div class="component-preset" draggable="true" data-type="header">Header Block</div>
+                <div class="component-preset" draggable="true" data-type="hero">Hero Feature Box</div>
+                <div class="component-preset" draggable="true" data-type="button">Action Button</div>
+                <div class="component-preset" draggable="true" data-type="card">Content Card</div>
+            </div>
+            
+            <div id="canvas">
+                <!-- User will drag and drop components here using JavaScript to update the DOM of this site. -->
+            </div>
+        </section>
+
+        <section class="export-code">
+            <button onclick="" class="export-link">Export img of wireframe</button>
+            <button onclick="" class="export-link">Print wireframe (or save as pdf)</button>
+            <button onclick="" class="export-link">Export html of wireframe</button>
+        </section>
+        
+        <section class="design-tool">
+            <div class="left-50">
+                <h2>Code Editor</h2>
+                <label>HTML</label>
+                <button onclick="" class="export-link">Load HTML from wireframe</button>
+                <textarea spellcheck="false" onkeyup="runResults()" placeholder = "<h1><b>hello world!</b></h1> <p>Example of a paragraph...</p>" id="html-input"></textarea>
+                
+                <label>CSS</label>
+                <button onclick="" class="export-link">Load CSS from Design Tokens</button>
+                <textarea spellcheck="false" onkeyup="runResults()" placeholder ="h1 { color: #DFDFDF;}" id="css-input"></textarea>
+                
+                <label>JavaScript</label>
+                <textarea spellcheck="false" onkeyup="runResults()" placeholder="javascript" id="js-input"></textarea>
+            </div>
+            <div class="right-50">
+                <label>Preview</label>
+                <iframe id="results-output"></iframe>
+            </div>
+        </section>
+        <section class="export-code">
+            <button onclick="" class="export-link">Export html and css bundle</button>
+            <button onclick="" class="export-link">Export css and json tokens</button>
+        </section>
+    </main>
     
     <!-- Footer -->
     <footer class="site-footer">
         <!-- <img src="/assets/name-header.png" alt="Simeon Paynter - Analytics, automation, and process improvement."> -->
         <h5>Secondary Links</h5>
-        <a href="/portfolio/overview.html" class ="footer-link">Portfolio</a>
+        <a href="../portfolio/overview.html" class ="footer-link">Portfolio</a>
         <a href="https://simbo.tech" class ="footer-link">Documentation</a>
-        <a href="/principles/overview.html" class ="footer-link">Guiding Principles</a>
-        <a href="/about.html" class ="footer-link">About</a>
-        <a href="/resume.html" class ="footer-link">Resume</a>
-        <a href="/contact.html" class ="footer-link">Contact</a>
+        <a href="../principles/overview.html" class ="footer-link">Guiding Principles</a>
+        <a href="../about.html" class ="footer-link">About</a>
+        <a href="../resume.html" class ="footer-link">Resume</a>
+        <a href="../contact.html" class ="footer-link">Contact</a>
       <!-- <p id="footer-copyright">&copy; 2026 Simeon Paynter. All rights reserved.</p> -->
     </footer>
     <!-- script to process dark and light theme -->
-    
+
+    <script>
+      const canvas = document.getElementById('canvas');
+      let globalColors = {primary: '#3B82F6', secondary: '#10B981'};
+      function updateColors() {
+        globalColors.primary = document.getElementById('color-primary').value;
+        globalColors.secondary = document.getElementById('color-secondary').value;
+      }
+      function runResults() {
+        let htmlCode = document.getElementById("html-input").value;
+        let cssCode = document.getElementById("css-input").value;
+        let jsCode = document.getElementById("js-input").value;
+        let output = document.getElementById("results-output");
+        
+        output.contentDocument.body.innerHTML = htmlCode;
+        
+        let style = output.contentDocument.createElement('style');
+        style.textContent = cssCode;
+        output.contentDocument.head.appendChild(style);
+      }
+    </script>
 </body>
 </html>
