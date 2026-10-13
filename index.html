@@ -3,50 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics and Automation - Simeon Paynter</title>
+    <title>Simeon Paynter</title>
+    
     <!-- CSS and JavaScript apart of phase 2 -->
+    <!--
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
+    -->
+
+    <style>
+        :root {
+            --color-bg: #EDF4FA;
+            --color-white: #F2F2F7;
+            --color-text-primary: #243A5E;
+            --color-text-primary-soft: #CFE3F1;
+        }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+        }
+        .sidebar-nav {
+            background-color: var(--color-text-primary-soft);
+            width: 50px;
+            display: flex;
+            flex-direction: coloumn;
+            flex-wrap: wrap;
+            gap: 5px;
+            border-radius: 10px;
+            border-size: 0px;
+            opacity: 40%;
+        }
+        li {
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: var(--color-bg);
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            border-radius: 25px;
+            border-size: 3px;
+            border-color: var(--color-white);
+        }
+        
+    </style>
 </head>
     
 <!-- Add Google Tag apart of Phase 2 -->   
 <body>
-    <header class="site-header">
-        <a href="/" class="logo"> 
-            <!--<img src="/assets/name-header.png" alt="Simeon Paynter - Analytics, automation, and process improvement."> -->
-                <h1>Simeon Paynter</h1>
-                <i>Analytics, automation, and process improvement</i>
-        </a>
-        <nav class="navbar">
-            <a href="/portfolio/overview.html" class="navbar-link">Portfolio</a> <!-- Where to save parent html and create site maps? -->
-            <a href="/about.html" class="navbar-link">About</a>
-        </nav>
-    </header>
 
-    <main class="home-page">
-        <section class="hero">
-            <img src="/assets/data-outputs.png" class="hero-img" loading="lazy">
-            <h2 class="hero-title">Example of messy workflows, unorganized data, etc...</h2>
-            <p class="hero-desc">Scaling business and leveraging solutions takes ample consideration of the outcomes you are trying to achieve. AI can bring visions to life, but mapping these solutions to core business outcomes must reflect your customer's needs.</p>
-        </section>
-
-        <section class="single-column-challenges">
-            <h2>AI can rapidly bring visions to life....</h2>
-            <p>Anyone with internet can create and prototype their app, website, automation, reporting, or other visions to life without the knowledge barrier of learning technical coding languages.</p> 
-            
-            <h2>The perfect tool cannot fix a broken workflow....</h2>
-            <p>AI has made it easier than ever to:</p>
-            <ul>
-                <li>Automate repetitive, time-consuming tasks</li>
-                <li>Analyze data to find trends and strategic insights</li>
-                <li>Create sites, apps, and forms to interact with customers</li>
-            </ul>
-            <p>... but are your solutions connected to valuable processes in the first place?</p>
-        </section>
-            
-    </main>
+    <section class="sidebar-nav">
+      <ul class="navbar">
+        <li class="navbar-item"><a href="#">-</a></li>
+        <li class="navbar-item"><a href="#">-</a></li>
+        <li class="navbar-item"><a href="#">-</a></li>
+        <li class="navbar-item"><a href="#">-</a></li>
+        <li class="navbar-item"><a href="#">-</a></li>
+      </ul>
+    </section>
     
+    <main>
+        <img height=400px; src="#">
+    </main>
+
     <h2>Explore Outcomes</h2>
     <section class="project-card-grid">
         <div class="project-card">
@@ -85,6 +113,6 @@
       <!-- <p id="footer-copyright">&copy; 2026 Simeon Paynter. All rights reserved.</p> -->
     </footer>
     <!-- script to process dark and light theme -->
-    
+
 </body>
 </html>
