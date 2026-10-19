@@ -9,6 +9,10 @@
 
    . screenshot .
 
-2) Want to learn more about the projects? Visit the project documentation at [Simbo.Tech](https://Simbo.Tech)
+2) Want to learn more about the projects? Visit the project documentation at [Simbo.Tech](https://Simbo.Tech).
 
-3) See other pictures at [Simeon.Pics](https://Simeon.Pics)
+3) See fun pictures at [Simeon.Pics](https://Simeon.Pics)!
+
+Contact: 
+Email - SimeonPaynter@gmail.com
+Phone - (218)-448-9143
