@@ -14,5 +14,5 @@
 3) See fun pictures at [Simeon.Pics](https://Simeon.Pics)!
 
 Contact: 
-Email - SimeonPaynter@gmail.com
-Phone - (218)-448-9143
+   Email - SimeonPaynter@gmail.com 
+   Phone - (218)-448-9143 
