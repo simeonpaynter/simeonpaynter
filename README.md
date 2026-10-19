@@ -1,4 +1,4 @@
-#Simeon Paynter
+# Simeon Paynter
 
 ## Website Links
 - [SimeonPaynter.com](https://SimeonPaynter.com)
