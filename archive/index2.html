@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US"> <!-- add light/dark mode functionality? -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simeon Paynter</title>
+    
+    <!-- CSS and JavaScript apart of phase 2 -->
+    <!--
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    -->
+
+    <style>
+        :root {
+            --color-bg: #EDF4FA;
+            --color-white: #F2F2F7;
+            --color-text-primary: #243A5E;
+            --color-text-primary-soft: #CFE3F1;
+        }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+        }
+        header {
+            text-align: center;
+            align-content: center;
+        }
+        .sidebar-nav {
+            background-color: var(--color-text-primary-soft);
+            width: 50px;
+            display: flex;
+            flex-direction: coloumn;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 5px;
+            border-radius: 10px;
+            border-size: 0px;
+            opacity: 40%;
+        }
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: var(--color-bg);
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            border-radius: 25px;
+            border-size: 3px;
+            border-color: var(--color-white);
+            min-heihgt: 200px;
+        }
+        .project-card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;   
+        }
+        .project-card {
+            border-radius: 25px;
+            border-size: 5px;
+            min-height: 400px;
+            border-color: var(--color-text-primary-soft);
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 5px;
+            background-color: var(--color-text-primary-soft);
+            color: var(--color-bg);
+        }
+    </style>
+</head>
+    
+<!-- Add Google Tag apart of Phase 2 -->   
+<body>
+
+    <header>
+        <h1>Simeon Paynter</h1>
+        <h6>Simplify, standardize, and scale.</h6>
+    </header>
+    
+    <section class="sidebar-nav">
+      <ul class="navbar">
+        <li class="navbar-item"><a href="#">-</a></li>
+        <li class="navbar-item"><a href="#">-</a></li>
+        <li class="navbar-item"><a href="#">-</a></li>
+        <li class="navbar-item"><a href="#">-</a></li>
+        <li class="navbar-item"><a href="#">-</a></li>
+      </ul>
+    </section>
+    
+    <main>
+        <img src="#">
+    </main>
+
+    <h2>Explore Outcomes</h2>
+    <section class="project-card-grid">
+        <div class="project-card">
+            <img src="/assets/data-outputs.png" alt="Project Image" loading="lazy" class="project-card-image">
+            <h4 class="project-card-title">From APIs to KPIs</h4>
+            <p class="project-card-summary">Methods to fetch data with API calls or traditional web scraping methods and discovering different reporting types to drive insights or operational efficiency.</p>
+        </div>
+        <div class="project-card">
+            <img src="/assets/data-outputs.png" alt="Project Image" loading="lazy" class="project-card-image">
+            <h4 class="project-card-title">Reimaging operational workflows with task lists and free automation solutions.</h4>
+            <p class="project-card-summary">The problem: Typical bottlenecks and errors from high volume communications</br>The process: investigate time per email, call, data processing, and spreadsheet maintenance.</br>The solution: understanding key processes and pain points, utilizing automation or data capabilities to convert time cleaning into time analyzing on the problems.</p>
+        </div>
+        <div class="project-card">
+            <img src="/assets/data-outputs.png" alt="Project Image" loading="lazy" class="project-card-image">
+            <h4 class="project-card-title">Project Title for a specific function</h4>
+            <p class="project-card-summary">High level overview of the project, the problem, the process, and the solution.</p>
+        </div>
+        <div class="project-card">
+            <img src="/assets/data-outputs.png" alt="Project Image" loading="lazy" class="project-card-image">
+            <h4 class="project-card-title">Project Title</h4>
+            <p class="project-card-summary">High level overview of the project, the problem, the process, and the solution.</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <!-- <img src="/assets/name-header.png" alt="Simeon Paynter - Analytics, automation, and process improvement."> -->
+        <h5>Secondary Links</h5>
+        <a href="/portfolio/overview.html" class ="footer-link">Portfolio</a>
+        <a href="/tools/overview.html" class="footer-link">Tools</a>
+        <a href="https://simbo.tech" class ="footer-link">Documentation</a>
+        <a href="/principles/overview.html" class ="footer-link">Guiding Principles</a>
+        <a href="/about.html" class ="footer-link">About</a>
+        <a href="/resume.html" class ="footer-link">Resume</a>
+        <a href="/contact.html" class ="footer-link">Contact</a>
+      <!-- <p id="footer-copyright">&copy; 2026 Simeon Paynter. All rights reserved.</p> -->
+    </footer>
+    <!-- script to process dark and light theme -->
+
+</body>
+</html>
