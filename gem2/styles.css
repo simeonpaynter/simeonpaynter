@@ -1,0 +1,482 @@
+/* =========================================
+   1. DESIGN TOKENS (Northwoods Slate & Pine)
+   ========================================= */
+:root {
+  /* 3 Primary Palette Colors */
+  --bg-mist: #F4F6F5;        /* Primary Neutral: Overcast water reflection */
+  --ink-pine: #1E2D24;       /* Primary Dark: Boreal evergreen silhouette */
+  --accent-slate: #3B6E8C;   /* Primary Accent: Lake Superior slate blue */
+
+  /* Functional Tints derived strictly from the 3 core colors */
+  --surface-card: #FFFFFF;
+  --ink-muted: rgba(30, 45, 36, 0.72);
+  --border-subtle: rgba(30, 45, 36, 0.12);
+  --accent-hover: #2E5871;
+  --accent-tint: rgba(59, 110, 140, 0.10);
+
+  /* Typography & Layout */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --container-max: 1040px;
+  --radius: 8px;
+  --transition: 0.2s ease;
+}
+
+/* =========================================
+   2. RESET & BASE STYLES
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-mist);
+  color: var(--ink-pine);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--ink-muted);
+}
+
+a {
+  color: var(--accent-slate);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* =========================================
+   3. HEADER & NAVIGATION
+   ========================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(244, 246, 245, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.brand-mark {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--ink-pine);
+  letter-spacing: -0.03em;
+}
+
+.brand-mark .dot {
+  color: var(--accent-slate);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--ink-pine);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent-slate);
+}
+
+.nav-links .nav-cta {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  background-color: var(--surface-card);
+}
+
+.nav-links .nav-cta:hover {
+  border-color: var(--accent-slate);
+}
+
+/* =========================================
+   4. HERO SECTION (With Subtle Contour Texture)
+   ========================================= */
+.hero {
+  padding: 5.5rem 0 4.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  /* Subtle topographic/wave lines evoking both lake contours & data waves */
+  background-image: radial-gradient(rgba(30, 45, 36, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-slate);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  color: var(--ink-pine);
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: 1.18rem;
+  max-width: 640px;
+  margin-bottom: 2rem;
+  color: var(--ink-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* =========================================
+   5. BUTTONS & LINKS
+   ========================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.3rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent-slate);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--surface-card);
+  color: var(--ink-pine);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-secondary:hover {
+  border-color: var(--ink-pine);
+  color: var(--ink-pine);
+}
+
+.btn-outline-light {
+  border: 1px solid rgba(244, 246, 245, 0.35);
+  color: var(--bg-mist);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(244, 246, 245, 0.1);
+  color: #FFFFFF;
+}
+
+.text-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent-slate);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* =========================================
+   6. SHARED SECTION LAYOUT
+   ========================================= */
+.section {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  color: var(--ink-pine);
+}
+
+.section-meta-links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.divider {
+  color: var(--border-subtle);
+}
+
+/* =========================================
+   7. SPOTLIGHT ("____ OF THE WEEK")
+   ========================================= */
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.spotlight-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--accent-slate);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent-slate);
+  margin-bottom: 0.6rem;
+}
+
+.spotlight-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--ink-pine);
+}
+
+.spotlight-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* =========================================
+   8. PROJECTS GRID
+   ========================================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-slate);
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.project-category {
+  color: var(--accent-slate);
+  font-weight: 600;
+}
+
+.project-year {
+  color: var(--ink-muted);
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--ink-pine);
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin-bottom: 1.25rem;
+}
+
+.tech-list li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.2rem 0.6rem;
+  background-color: var(--accent-tint);
+  color: var(--ink-pine);
+  border-radius: 4px;
+}
+
+.project-link {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.section-footer {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* =========================================
+   9. DARK PINE ABOUT & CONTACT BANNER
+   ========================================= */
+.about-banner {
+  background-color: var(--ink-pine);
+  color: var(--bg-mist);
+  border-bottom: none;
+}
+
+.about-banner h2,
+.about-banner h3 {
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+}
+
+.about-banner p {
+  color: rgba(244, 246, 245, 0.82);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact-box {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(244, 246, 245, 0.14);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* =========================================
+   10. FOOTER
+   ========================================= */
+.site-footer {
+  background-color: var(--ink-pine);
+  border-top: 1px solid rgba(244, 246, 245, 0.12);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-footer p {
+  color: rgba(244, 246, 245, 0.65);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: rgba(244, 246, 245, 0.85);
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+}
+
+/* =========================================
+   11. RESPONSIVE ADJUSTMENTS
+   ========================================= */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0 3.5rem;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
